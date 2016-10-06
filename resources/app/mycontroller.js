@@ -1,8 +1,14 @@
-class myController {
-	constructor($scope){
-		this.$scope = $scope;
-        console.log('I\'ve loaded the controller!');
+import myService from './myservice'
+
+export default class myController {
+	constructor($scope, myservice){
+		
+		let vm = this;
+		vm.$scope = $scope;
+        vm.data = [];
+
+		myservice.GetData().then(function (response) {	
+			vm.data = response.data;
+		});
 	}
 }
-
-export default myController;
