@@ -1,7 +1,9 @@
 import angular from 'angular';
-import headerComponent from './components/header';
-import footerComponent from './components/footer';
+import headerComponent from './header';
+import footerComponent from './footer';
+import myController from './mycontroller';
 
 angular.module('ngWebpackingItUp', [])
     .component('header', headerComponent)
-    .component('footer', footerComponent);
+    .component('footer', footerComponent)
+    .controller('mycontroller', myController)
