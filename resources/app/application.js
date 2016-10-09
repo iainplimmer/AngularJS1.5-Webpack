@@ -1,13 +1,14 @@
 import angular from 'angular';
 import headerComponent from './header';
 import footerComponent from './footer';
-import myBodyComponent from './mybody';
+import myComponent from './mycomponent';
 import myController from './mycontroller';
 import myService from './myservice'
+import myDirective from './mydirective'
 
-angular.module('ngWebpackingItUp', [])
-    .component('header', headerComponent)
-    .component('footer', footerComponent)
-    .component('myBody', myBodyComponent)
+angular.module('ngWebpackingItUp', [])    
+    .component('myComponent', myComponent)
     .controller('mycontroller', myController)
     .service('myservice', myService)
+    .directive('myDirective', () => new myDirective)
+    
