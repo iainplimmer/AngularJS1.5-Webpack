@@ -1,8 +1,9 @@
 import myController from './mycontroller';
+import bodyTemplate from './templates/body.html';
 
 let myComponent = {
   restrict: 'E',
-  templateUrl: './resources/app/templates/body.html',
+  template: bodyTemplate,
   controller: myController
 };
 
